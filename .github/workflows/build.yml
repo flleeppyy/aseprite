@@ -112,6 +112,7 @@ jobs:
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
+      if: runner.os == 'Windows'
       with:
         name: aseprite-${{ matrix.os }}-${{ matrix.ui }}-${{ matrix.scripting }}-${{ matrix.build_type }}
         path: build/
